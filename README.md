@@ -1,0 +1,13 @@
+# Can machine learn to make a good joke?
+This the question that I am trying to answer and for the start, I need to to find a way to quantify a good joke. In this repository I will try to analyze the r/jokes subreddit dataset that was uoloaded to The dataset that I used is extracted and simplified from [Kaggle](https://www.kaggle.com/datasets/bwandowando/reddit-rjokes-dataset) dataset. This dataset contains ~37200 joke threads.
+I chose subset of columns that I was interested in my analysis.
+Here are the list of columns that I kept:
+- *thread_id*: unique id of the thread containing the joke (Object)
+- *thread_title*: title of the thread (Object) *sometimes this title contains start of the joke*
+- *thread_selftext*: Text of the thread which includes the joke (Object)
+- *thread_score*: This score between 0 and 1 (Object) *supposed to be Upvotes - downvotes but I can't see any negative values so still I don't know what is it.*
+- *thread_num_comments*: Number of comments in the thread (float64)
+- *thread_created_utc*: Time of the thread creation in UTC (Object)
+- *thread_upvote_ratio*: Ratio of upvotes to to total votes (float64)
+- *thread_over_18*: Whether the thread is over 18 or not (Object)
+ and try to find a way to quantify a good joke. I will also try to build a model that can generate jokes.
