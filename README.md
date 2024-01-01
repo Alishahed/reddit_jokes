@@ -11,3 +11,13 @@ Here are the list of columns that I kept:
 - *thread_upvote_ratio*: Ratio of upvotes to to total votes (float64)
 - *thread_over_18*: Whether the thread is over 18 or not (Object)
  and try to find a way to quantify a good joke. I will also try to build a model that can generate jokes.
+
+ ## Data 
+Three files are in the *data* folder
+1) reddit_jokes_slim.csv: All ~37200 jokes (clean and adult)
+2) reddit_jokes_slim_clean.csv : Only clean jokes
+3) reddit_jokes_slim_plus18.csv: only adult jokes
+
+## Notebooks
+1) reddit_jokes_score_analysis.ipynb : 
+Which measure in this dataset can be reflect the quality of the joke? thread_score which is assigned by reddit or thread_upvote_ratio which is the ratio of upvotes to total votes?
