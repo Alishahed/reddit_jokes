@@ -16,7 +16,7 @@ Here are the list of columns that I kept:
 Three files are in the *data* folder
 1) reddit_jokes_slim.csv: All ~37200 jokes (clean and adult)
 2) reddit_jokes_slim_clean.csv : Only clean jokes
-3) reddit_jokes_slim_plus18.csv: only adult jokes
+3) reddit_jokes_slim_plus18.csv: Only adult jokes
 
 ## Notebooks
 1) reddit_jokes_score_analysis.ipynb : 
