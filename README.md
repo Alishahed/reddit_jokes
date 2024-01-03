@@ -1,3 +1,4 @@
+![Python](https://img.shields.io/badge/python-3.8-blue.svg)
 # Can machine learn to make a good joke?
 This the question that I am trying to answer and for the start, I need to to find a way to quantify a good joke. In this repository I will try to analyze the r/jokes subreddit dataset that was uoloaded to The dataset that I used is extracted and simplified from [Kaggle](https://www.kaggle.com/datasets/bwandowando/reddit-rjokes-dataset) dataset. This dataset contains ~37200 joke threads.
 I chose subset of columns that I was interested in my analysis.
@@ -14,9 +15,10 @@ Here are the list of columns that I kept:
 
  ## Data 
 Three files are in the *data* folder
-1) reddit_jokes_slim.csv: All ~37200 jokes (clean and adult)
-2) reddit_jokes_slim_clean.csv : Only clean jokes
-3) reddit_jokes_slim_plus18.csv: Only adult jokes
+1) reddit_jokes_slim.csv: All ~37200 jokes
+2) reddit_jokes_slim_processed.csv: All jokes but columns are converted to appropriate types
+3) reddit_jokes_slim_clean.csv : Only clean jokes
+4) reddit_jokes_slim_plus18.csv: Only adult jokes
 
 ## Notebooks
 1) reddit_jokes_score_analysis.ipynb : 
