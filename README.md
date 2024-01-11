@@ -1,6 +1,11 @@
 ![Python](https://img.shields.io/badge/python-3.8-blue.svg)
-# Can a machine learn to make a good joke?
-This the question that I am trying to answer and for the start, I need to to find a way to quantify a good joke. In this repository I will try to analyze the r/jokes subreddit dataset that was uoloaded to The dataset that I used is extracted and simplified from [Kaggle](https://www.kaggle.com/datasets/bwandowando/reddit-rjokes-dataset) dataset. This dataset contains ~37200 joke threads.
+
+<div style="text-align: center;">
+    <img src="images/funny_measure_webpage.png" width="600" />
+</div>
+
+# Can a machine judge the quality of a joke?
+This the question that I am trying to answer and for the start, I need to to find a way to quantify a good joke. In this repository I will try to analyze the r/jokes subreddit dataset that was uploaded to The dataset that I used is extracted and simplified from [Kaggle](https://www.kaggle.com/datasets/bwandowando/reddit-rjokes-dataset) dataset. This dataset contains ~37200 joke threads.
 I chose subset of columns that I was interested in my analysis.
 Here are the list of columns that I kept:
 - *thread_id*: unique id of the thread containing the joke (Object)
@@ -25,3 +30,5 @@ Three files are in the *data* folder
 Which measure in this dataset can be reflect the quality of the joke? thread_score which is assigned by reddit or thread_upvote_ratio which is the ratio of upvotes to total votes?
 2) reddit_jokes_adult_logreg_classifier.ipynb:
 I trained a simple logistic regression model to classify adult jokes. I used thread_title, thread_selftext as features and thread_over_18 as target. Good performance considering how simple the model is. Of course, more objective test of the model, I need to find a much larger dataset.
+2) reddit_jokes_adult_lstm_classifier.ipynb:
+Another attempt to detect adult jokes. This time I used LSTM model which resulted in better performance compare to logistic regression model.
