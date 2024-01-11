@@ -20,15 +20,20 @@ Here are the list of columns that I kept:
 
  ## Data 
 Three files are in the *data* folder
-1) reddit_jokes_slim.csv: All ~37200 jokes
-2) reddit_jokes_slim_processed.csv: All jokes but columns are converted to appropriate types
-3) reddit_jokes_slim_clean.csv : Only clean jokes
-4) reddit_jokes_slim_plus18.csv: Only adult jokes
+1) **reddit_jokes_slim.csv**: All ~37200 jokes
+2) **reddit_jokes_slim_processed.csv**: All jokes but columns are converted to appropriate types
+3) **reddit_jokes_slim_clean.csv** : Only clean jokes
+4) **reddit_jokes_slim_plus18.csv**: Only adult jokes
 
 ## Notebooks
-1) reddit_jokes_score_analysis.ipynb : 
+1) **reddit_jokes_score_analysis.ipynb** : 
+
 Which measure in this dataset can be reflect the quality of the joke? thread_score which is assigned by reddit or thread_upvote_ratio which is the ratio of upvotes to total votes?
-2) reddit_jokes_adult_logreg_classifier.ipynb:
+
+2) **reddit_jokes_adult_logreg_classifier.ipynb**:
+
 I trained a simple logistic regression model to classify adult jokes. I used thread_title, thread_selftext as features and thread_over_18 as target. Good performance considering how simple the model is. Of course, more objective test of the model, I need to find a much larger dataset.
-2) reddit_jokes_adult_lstm_classifier.ipynb:
+
+3) **reddit_jokes_adult_lstm_classifier.ipynb**:
+
 Another attempt to detect adult jokes. This time I used LSTM model which resulted in better performance compare to logistic regression model.
