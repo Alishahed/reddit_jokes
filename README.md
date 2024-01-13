@@ -1,5 +1,5 @@
-![Python](https://img.shields.io/badge/python-3.8-blue.svg)
 
+![Python](https://img.shields.io/badge/python-3.8-blue.svg)
 <div style="text-align: center;">
     <img src="images/funny_measure_webpage.png" width="600" />
 </div>
@@ -25,15 +25,18 @@ Three files are in the *data* folder
 3) **reddit_jokes_slim_clean.csv** : Only clean jokes
 4) **reddit_jokes_slim_plus18.csv**: Only adult jokes
 
-## Notebooks
+## Experiments Notebooks
 1) **reddit_jokes_score_analysis.ipynb** : 
 
 Which measure in this dataset can be reflect the quality of the joke? thread_score which is assigned by reddit or thread_upvote_ratio which is the ratio of upvotes to total votes?
 
 2) **reddit_jokes_adult_logreg_classifier.ipynb**:
 
-I trained a simple logistic regression model to classify adult jokes. I used thread_title, thread_selftext as features and thread_over_18 as target. Good performance considering how simple the model is. Of course, more objective test of the model, I need to find a much larger dataset.
+Not directly related to the quality of the joke but my curiosity. I trained a simple logistic regression model to classify adult jokes. I used thread_title, thread_selftext as features and thread_over_18 as target. Good performance considering how simple the model is. Of course, more objective test of the model, I need to find a much larger dataset.
 
 3) **reddit_jokes_adult_lstm_classifier.ipynb**:
 
 Another attempt to detect adult jokes. This time I used LSTM model which resulted in better performance compare to logistic regression model.
+
+4) **reddit_jokes_upvote_prediction_linreg_1.ipynb**:
+In this notebook we try to predict the thread_upvote_ratio using thread_title and thread_selftext. We used linear regression model and we got -0.06 R2 score which is not is not adequate. Also, We explore the performance of this model using Q-Q plot of the residues as well as residue plot. All the plots indicates the poor performance of the model.
