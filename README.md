@@ -38,5 +38,8 @@ Not directly related to the quality of the joke but my curiosity. I trained a si
 
 Another attempt to detect adult jokes. This time I used LSTM model which resulted in better performance compare to logistic regression model.
 
-4) **reddit_jokes_upvote_prediction_linreg_1.ipynb**:
+4) **reddit_jokes_upvote_prediction_linreg.ipynb**:
 In this notebook we try to predict the thread_upvote_ratio using thread_title and thread_selftext. We used linear regression model and we got -0.06 R2 score which is not is not adequate. Also, We explore the performance of this model using Q-Q plot of the residues as well as residue plot. All the plots indicates the poor performance of the model.
+
+5) **reddit_jokes_upvote_prediction_lstm.ipynb**:
+Continuing the prediction of upvote ratio, this time I used LSTM model. The model overfits despite all the mechanism that I have put in place, including batch normalization, regularization and dropout. The small size of dataset is to blame here I guess. However, the R-squared on test data can reach upto 16% on the test data which is much better than linear regression model. 
