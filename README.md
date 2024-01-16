@@ -43,3 +43,5 @@ In this notebook we try to predict the thread_upvote_ratio using thread_title an
 
 5) **reddit_jokes_upvote_prediction_lstm.ipynb**:
 Continuing the prediction of upvote ratio, this time I used LSTM model. The model overfits despite all the mechanism that I have put in place, including batch normalization, regularization and dropout. The small size of dataset is to blame here I guess. However, the R-squared on test data can reach upto 16% on the test data which is much better than linear regression model. 
+
+6) **reddit_jokes_upvote_ratio_prediction_logreg_classifier.ipynb**:
