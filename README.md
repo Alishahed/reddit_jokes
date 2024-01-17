@@ -44,4 +44,64 @@ In this notebook we try to predict the thread_upvote_ratio using thread_title an
 5) **reddit_jokes_upvote_prediction_lstm.ipynb**:
 Continuing the prediction of upvote ratio, this time I used LSTM model. The model overfits despite all the mechanism that I have put in place, including batch normalization, regularization and dropout. The small size of dataset is to blame here I guess. However, the R-squared on test data can reach upto 16% on the test data which is much better than linear regression model. 
 
-6) **reddit_jokes_upvote_ratio_prediction_logreg_classifier.ipynb**:
+6) **reddit_jokes_upvote_ratio_prediction_classifier.ipynb**:
+In this notebook, I continue with the problem of predicting the upvote ratio but to make it an easier problem to solve, I turn the problem to a binary classification problem by putting the jokes into two equal sized bucket (low upvote ratio and  high upvote ratio). Then I tried to train a logistic regression to predict the class using only the text of the joke. Here is the best result thst I manage to get.
+                precision    recall  f1-score   support
+
+           0       0.58      0.61      0.60      5626
+           1       0.59      0.55      0.57      5539
+
+    accuracy                           0.58     11165
+   macro avg       0.58      0.58      0.58     11165
+weighted avg       0.58      0.58      0.58     11165
+
+Not very promising.
+
+6) **reddit_jokes_upvote_ratio_prediction_classifier_2.ipynb**:
+
+In this notebook I added lightGBM model and LSTM to test how increasing the complexity of the model affect the performance.
+                
+**logistic regression**                
+                precision    recall  f1-score   support
+
+           0       0.58      0.58      0.58      3765
+           1       0.57      0.57      0.57      3678
+
+    accuracy                           0.58      7443
+   macro avg       0.57      0.57      0.57      7443
+weighted avg       0.58      0.58      0.58      7443
+
+**lightGBM**
+
+                precision    recall  f1-score   support
+
+           0       0.59      0.60      0.60      3765
+           1       0.58      0.57      0.57      3678
+
+    accuracy                           0.58      7443
+   macro avg       0.58      0.58      0.58      7443
+weighted avg       0.58      0.58      0.58      7443
+
+**LSTM**
+                precision    recall  f1-score   support
+
+           0       0.60      0.55      0.57      3765
+           1       0.57      0.61      0.59      3678
+
+    accuracy                           0.58      7443
+   macro avg       0.58      0.58      0.58      7443
+weighted avg       0.58      0.58      0.58      7443
+
+
+The results are very close and not satisfactory. Moreover, the LSTM starts to overfit pretty early in the epochs.
+6) **reddit_jokes_upvote_ratio_prediction_classifier_3.ipynb**:
+In this notebook we again increased the complexity of the model. This time we use BERT which is a Encoder-based transformer with ~66m parameters. The results is slightly better (~3% on total accuracy). Note that BERT overfits after the 2nd epoch.
+
+                precision    recall  f1-score   support
+
+           0       0.61      0.64      0.63      3765
+           1       0.62      0.58      0.60      3678
+
+    accuracy                           0.61      7443
+   macro avg       0.61      0.61      0.61      7443
+weighted avg       0.61      0.61      0.61      7443
